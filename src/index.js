@@ -9,8 +9,8 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-//db.sequelize.sync({ force: true }).then((result) => {
+db.sequelize.sync({ force: true }).then((result) => {
   server.listen(process.env.PORT || 3003, () => {
     console.log("server is running on port ", process.env.PORT || 3003);
   });
-//});
+});
